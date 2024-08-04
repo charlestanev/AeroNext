@@ -25,7 +25,7 @@ const Header = () => {
               <a href="#">Customers</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <button className='bg-black px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>get for free</button>
+              <button className='btn btn-primary'>get for free</button>
             </nav>
           </div>
         </div>
