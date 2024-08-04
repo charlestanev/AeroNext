@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import MenuIcon from "@/assets/menu.svg";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
