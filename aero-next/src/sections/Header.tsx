@@ -5,7 +5,7 @@ import Image from "next/image"
 import MenuIcon from '@/assets/menu.svg';
 const Header = () => {
   return (
-    <header className='sticky top-0'>
+    <header className='sticky top-0 backdrop-blur-sm'>
       <div className='flex justify-center items-center py-3 bg-black text-white text-sm gap-3'>
         <p className="text-white/60 hidden md:block">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         <div className='inline-flex gap-1 items-center'>
@@ -25,7 +25,7 @@ const Header = () => {
               <a href="#">Customers</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <button className='bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>get for free</button>
+              <button className='bg-black px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>get for free</button>
             </nav>
           </div>
         </div>
