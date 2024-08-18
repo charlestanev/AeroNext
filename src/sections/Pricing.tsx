@@ -1,4 +1,4 @@
-// import CheckIcon from '@assets/check.svg';
+import SVGIMG from "@/assets/check.svg"; // Adjust the path as necessary
 
 const pricingTiers = [
   {
@@ -57,16 +57,20 @@ export const Pricing = () => {
     <section className="py-24">
       <div className="container">
         <h2 className="section-title">Pricing</h2>
-        <p className="section-description mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam cum repudiandae modi fugiat maxime!</p>
+        <p className="section-description mt-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam cum
+          repudiandae modi fugiat maxime!
+        </p>
         <div>
           {pricingTiers.map(({
             title,
             monthlyPrice,
             buttonText,
-            // popular,
-            // inverse,
-            features }) => (
-            <div>
+            popular,
+            inverse,
+            features,
+          }) => (
+            <div className="p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA]">
               <h3>{title}</h3>
               <div>
                 <span>${monthlyPrice}</span>
@@ -74,17 +78,15 @@ export const Pricing = () => {
               </div>
               <button>{buttonText}</button>
               <ul>
-                {features.map((feature) => (
-                  <li>
-                    {/* <CheckIcon /> */}
-                    <span>{feature}</span>
+                {features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center">
+                    <SVGIMG width={20} height={20} />
+                    <span className="ml-2">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
-
-
         </div>
       </div>
     </section>
