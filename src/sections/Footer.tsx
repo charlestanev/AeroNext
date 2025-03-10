@@ -1,34 +1,55 @@
+"use client"; // Ensures this is a Client Component
+
 import Image from "next/image";
-import logo from "@/assets/logosaas.png";
+import newLogo from "@/assets/new-logo.png";
 import SocialX from "@/assets/social-x.svg";
 import SocialInsta from "@/assets/social-insta.svg";
 import SocialLinkedIn from "@/assets/social-linkedin.svg";
 import SocialPin from "@/assets/social-pin.svg";
-import SocialYoutube from '@/assets/social-youtube.svg';
+import SocialYoutube from "@/assets/social-youtube.svg";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center">
-      <div className="container">
-        <div className="inline-flex relative before:content-[''] before:top-0 before:left-0 before:right-0 before:bottom-0 before:h-full before:w-full before:blur before:bg-gradient-to-r from-[#F87BFF] via-[#FB92CF] via-[#FFDD9B] via-[#C2F0B1] to-[#2FD8FE] before:absolute">
-          <Image src={logo} height={40} alt="SaaS logo" className="relative" />
+    <footer className="bg-gray-900 text-gray-400 text-sm py-12">
+      <div className="container mx-auto text-center px-6">
+        {/* Logo with hover effect */}
+        <div className="inline-block relative hover:scale-105 transition-transform">
+          <Image src={newLogo} height={40} alt="Company Logo" />
         </div>
-        <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
-          <a href="#">About</a>
-          <a href="#">Features</a>
-          <a href="#">Customers</a>
-          <a href="#">Pricing</a>
-          <a href="#">Help</a>
-          <a href="#">Careers</a>
+
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap justify-center gap-6 mt-6 text-gray-300">
+          <a href="#" className="hover:text-white transition">About</a>
+          <a href="#" className="hover:text-white transition">Features</a>
+          <a href="#" className="hover:text-white transition">Customers</a>
+          <a href="#" className="hover:text-white transition">Pricing</a>
+          <a href="#" className="hover:text-white transition">Help</a>
+          <a href="#" className="hover:text-white transition">Careers</a>
         </nav>
-        <div className="flex justify-center gap-6 mt-6">
-          <SocialX />
-          <SocialInsta />
-          <SocialLinkedIn />
-          <SocialPin />
-          <SocialYoutube />
+
+        {/* Social Media Icons with Real Links */}
+        <div className="flex justify-center gap-5 mt-6">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:scale-110 transition">
+            <SocialX className="h-6 w-6" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:scale-110 transition">
+            <SocialInsta className="h-6 w-6" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:scale-110 transition">
+            <SocialLinkedIn className="h-6 w-6" />
+          </a>
+          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="hover:scale-110 transition">
+            <SocialPin className="h-6 w-6" />
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:scale-110 transition">
+            <SocialYoutube className="h-6 w-6" />
+          </a>
         </div>
-        <p className="mt-6">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+
+        {/* Copyright Notice with Dynamic Year */}
+        <p className="mt-6 text-gray-500">
+          &copy; {new Date().getFullYear()} Your Company, Inc. All rights reserved.
+        </p>
       </div>
     </footer>
   );

@@ -3,6 +3,7 @@ import Image from "next/image";
 import ArroRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logosaas.png";
 import MenuIcon from "@/assets/menu.svg";
+import newLogo from "@/assets/new-logo.png";
 
 const Header = () => {
   return (
@@ -23,7 +24,8 @@ const Header = () => {
         <div className="container mx-auto px-6 lg:px-20">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Image src={Logo} alt="logo" height={50} width={50} className="hover:scale-105 transition-transform" />
+
+            <Image src={newLogo} alt="logo" height={50} width={50} className="hover:scale-105 transition-transform" />
 
             {/* Mobile Menu Icon */}
             <MenuIcon className="h-6 w-6 text-gray-700 md:hidden cursor-pointer" />
